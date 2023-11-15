@@ -250,3 +250,11 @@ input[type="date"]::placeholder{
   font-size: 18px;
   color: #55585A;
 }
+@media screen and (max-width:743px){
+  .accordion-grid-deal {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .accordion-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
