@@ -1,0 +1,117 @@
+<!-- accordion.component.html -->
+<div class="accordion">
+  <div *ngFor="let item of items; let i = index" class="accordion-item" [ngClass]="{'active': item.expanded}">
+    <div class="accordion-item-header" (click)="toggleItem(i)">
+      <h3> Transfer</h3>
+
+      <i class="bi bi-chevron-down arrow-icon" [ngClass]="{'expanded': item.expanded}"></i>
+    </div>
+    <div class="accordion-item-body" [ngStyle]="{'max-height.px': item.expanded ? getContentHeight(i) : 0}">
+      <div class="accordion-item-body-content">
+        <form action="">
+          <div class="accordion-grid">
+            <div class="input-amount">
+              <label>Amount</label>
+              <!-- <div class="amount"> -->
+              <select id="cars" name="cars">
+                <option value="">MUR</option>
+                <!-- <option value="audi">Audi</option> -->
+              </select>
+              <input type="text" name="" id="" placeholder="0.00">
+              <!-- </div> -->
+            </div>
+            <div class="input-group">
+              <label for="">MUR Equivalent</label>
+              <input type="text">
+            </div>
+            <div class="input-group">
+              <label for=""></label>
+              <input type="date">
+            </div>
+            <div class="input-group">
+              <label for="">Ordered by</label>
+              <input type="text" placeholder="Enter details here">
+            </div>
+            <div class="input-group">
+              <label for="">Charge Account</label>
+              <select id="cars" name="cars">
+                <option value="">Select charge account</option>
+                <!-- <option value="audi">Audi</option> -->
+              </select>
+            </div>
+            <!-- <div>dd</div> -->
+          </div>
+            <span class="radio-title"> Is the staff rate applicable</span>
+          <div class="radio-container">
+            <label>
+              <input type="radio" name="radio" checked />
+              <span>Yes</span>
+            </label>
+            <label>
+              <input type="radio" name="radio" />
+              <span>No</span>
+            </label>
+          </div>
+        </form>
+
+
+
+      </div>
+    </div>
+  </div>
+  <div *ngFor="let item of items; let i = index" class="accordion-item" [ngClass]="{'active': item.expanded}">
+    <div class="accordion-item-header" (click)="toggleItem(i)">
+      <h3> Deal tickets Deals</h3>
+
+      <i class="bi bi-chevron-down arrow-icon" [ngClass]="{'expanded': item.expanded}"></i>
+    </div>
+    <div class="accordion-item-body" [ngStyle]="{'max-height.px': item.expanded ? getContentHeight(i) : 0}">
+      <div class="accordion-item-body-content">
+        <form action="">
+        <div class="accordion-grid-deal">
+          <div class="input-group">
+            <label for="">Deal ticket number</label>
+            <input type="text" placeholder="Deal ticket ">
+          </div>
+
+          <div class="input-group">
+            <label for="">Rate</label>
+            <input type="text" placeholder="0.00">
+          </div>
+
+          <div class="input-group">
+            <label for="">Agree Rate</label>
+            <input type="text"  placeholder="0.00">
+          </div>
+
+        </div>
+        <span class="radio-title"> Is the staff rate applicable</span>
+        <div class="radio-container">
+          <label>
+            <input type="radio" name="radio" checked />
+            <span>Yes</span>
+          </label>
+          <label>
+            <input type="radio" name="radio" />
+            <span>No</span>
+          </label>
+        </div>
+
+
+        <span class="radio-title"> Is there a System flag rate</span>
+        <div class="radio-container">
+          <label>
+            <input type="radio" name="flag" checked />
+            <span>Yes</span>
+          </label>
+          <label>
+            <input type="radio" name="flag" />
+            <span>No</span>
+          </label>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+
+</div>
